@@ -14,7 +14,7 @@ export const authMiddleware = async (req , res , next)=>{
         let decoded;
 
         try {
-            decoded = jwt.verify(token , process.env.JWT_SECRET);
+            decoded = jwt.verify(token , process.env.JWT_SECRET_KEY);
         } catch (error) {
             return res.status(401).json({
                 message:"Unauthorized - Invalid token"
@@ -49,6 +49,9 @@ export const authMiddleware = async (req , res , next)=>{
 }
 
 
+
+
+
 export const checkAdmin  = async(req , res , next)=>{
     try {
         const userId = req.user.id;
@@ -74,3 +77,5 @@ export const checkAdmin  = async(req , res , next)=>{
         res.status(500).json({message:"Error checking admin role"});
     }
 }
+
+

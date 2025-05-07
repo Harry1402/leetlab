@@ -31,9 +31,10 @@ export const register = async (req , res)=>{
             }
         })
 
-        const token = jwt.sign({id:newUser.id} , process.env.JWT_SECRET , {
-            expiresIn:"7d"
-        })
+        const token = jwt.sign({id:newUser.id} , process.env.JWT_SECRET_KEY , {
+            expiresIn:"7d",
+        }
+        )
 
         res.cookie("jwt" , token , {
             httpOnly:true,
@@ -86,7 +87,7 @@ export const login = async (req , res)=>{
             })
         }
 
-        const token = jwt.sign({id:user.id} , process.env.JWT_SECRET,{
+        const token = jwt.sign({id:user.id} , process.env.JWT_SECRET_KEY,{
             expiresIn:"7d"
         })
 
