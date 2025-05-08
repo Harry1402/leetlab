@@ -5,7 +5,7 @@ const problemRoutes =express.Router();
 
 problemRoutes.post("/create-problem",authMiddleware,checkAdmin,createProblem)
 problemRoutes.get("/get-all-problems",authMiddleware,getAllProblems)
-problemRoutes.get("/get-all-problems/:id",authMiddleware,getProblemsById)
+problemRoutes.post("/get-all-problems/:id",authMiddleware,getProblemsById)
 problemRoutes.put("/update-problem/:id",authMiddleware,checkAdmin,updateProblem)
 problemRoutes.delete("/delete-problem/:id",authMiddleware,checkAdmin,deleteProblem)
 problemRoutes.put("/get-solved-problems",authMiddleware,getAllProblemsSolvedByUser)

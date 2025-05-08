@@ -44,7 +44,6 @@ export const submitBatch = async (submissions)=>{
     return data // [{token} , {token} , {token}]
 }
 
-
 export function getLanguageName(languageId){
     const LANGUAGE_NAMES = {
         74: "TypeScript",
