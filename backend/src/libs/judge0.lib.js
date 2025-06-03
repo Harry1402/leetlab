@@ -39,11 +39,11 @@ export const submitBatch = async (submissions)=>{
     })
 
 
-    console.log("Submission Results: ", data)
+    console.log("Submission Results: ", data)     
 
     return data // [{token} , {token} , {token}]
 }
-
+ 
 export function getLanguageName(languageId){
     const LANGUAGE_NAMES = {
         74: "TypeScript",
