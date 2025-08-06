@@ -25,7 +25,7 @@ const App = () => {
     );
   }
   return (
-    <div className='flex flex-col items-center justify-center'>App
+    <div className='flex flex-col items-center justify-center text-cyan-300'>App
     <Routes>
       <Route path='/' element={authUser ? <HomePage/>:<Navigate to={"/login"}/>}/>
       <Route path='/login' element={ !authUser ? <LoginPage/>:<Navigate to={"/"}/>}/>
