@@ -1,9 +1,8 @@
-// Importing All The Custom Imports 
 import React, { useState, useMemo } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Link } from "react-router-dom";
 import { Bookmark, PencilIcon, Trash, TrashIcon, Plus } from "lucide-react";
-import { useActions } from "../store/useActions";
+import { useActions } from "../store/useAction.jsx";
 import AddToPlaylistModal from "./AddToPlaylist";
 import CreatePlaylistModal from "./CreatePlaylistModal";
 import { usePlaylistStore } from "../store/usePlaylistStore";
@@ -133,9 +132,10 @@ const ProblemsTable = ({ problems }) => {
           <tbody>
             {paginatedProblems.length > 0 ? (
               paginatedProblems.map((problem) => {
-                const isSolved = problem.solvedBy.some(
-                  (user) => user.userId === authUser?.id
-                );
+                const isSolved = (problem.solvedBy ?? []).some(
+  (user) => user.userId === authUser?.id
+);
+
                 return (
                   <tr key={problem.id}>
                     <td>

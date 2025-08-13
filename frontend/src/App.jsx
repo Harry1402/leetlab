@@ -7,6 +7,7 @@ import { Loader } from "lucide-react";
 import HomePage from './page/HomePage';
 import LoginPage from './page/LoginPage';
 import SignUp from './page/SignUp';
+import ProblemPage from "./page/ProblemPage";
 
 import { useAuthStore } from "./store/useAuthStore";
 
@@ -30,6 +31,9 @@ const App = () => {
       <Route path='/' element={authUser ? <HomePage/>:<Navigate to={"/login"}/>}/>
       <Route path='/login' element={ !authUser ? <LoginPage/>:<Navigate to={"/"}/>}/>
       <Route path='/signup' element={!authUser ?<SignUp/>:<Navigate to={"/"}/>}/>
+       <Route path="/problem/:id"element={authUser ? <ProblemPage /> : <Navigate to="/login" />}/>
+       
+        
     </Routes>
     </div>
   )
