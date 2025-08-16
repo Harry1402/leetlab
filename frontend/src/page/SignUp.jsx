@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 import {z} from "zod";
-import AuthImagePattern from '../component/AuthImagePattern';
+import AuthImagePattern from '../components/AuthImagePattern';
 import { useAuthStore } from "../store/useAuthStore";
 
 const SignUpSchema = z.object({

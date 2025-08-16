@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Mail, User, Shield, Image } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
-import ProfileSubmission from "../component/ProfileSubmission";
-import ProblemSolvedByUser from "../component/ProblemSolvedByUser";
-import PlaylistProfile from "../component/PlaylistProfile";
+import ProfileSubmission from "../components/ProfileSubmission";
+import ProblemSolvedByUser from "../components/ProblemSolvedByUser";
+import PlaylistProfile from "../components/PlaylistProfile";
 
 const Profile = () => {
   const { authUser } = useAuthStore();
