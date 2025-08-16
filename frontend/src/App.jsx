@@ -8,11 +8,11 @@ import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 
 import ProblemPage from "./page/ProblemPage";
-import Layout from "./component/layout.jsx";
+import Layout from "./components/layout.jsx";
 
 import AddProblem from "./page/AddProblem";
 import Profile from "./page/Profile.jsx";
-import AdminRoute from "./component/AdminRoute";
+import AdminRoute from "./components/AdminRoute";
 
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
