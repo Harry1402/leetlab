@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(
   cors({
     origin :"http://localhost:5173",  //kaha se request Accept karna chahate ho 
@@ -37,5 +38,6 @@ app.get("/",(req,res)=>{
 })
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+  
+  console.log(`Server is running on port ${process.env.PORT }`);
 });
